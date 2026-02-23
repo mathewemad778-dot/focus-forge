@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FocusForge</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar">
+            <h1 class="logo">FocusForge</h1>
+            <button id="themeToggle" class="theme-btn">Toggle Theme</button>
+        </nav>
+        <!-- Main Dashboard -->
+        <main class="dashboard">
+            <!-- To Do Section -->
+            <section class="cardtodo-section">
+                <h2>To Do List</h2>
+                <div class="todo-input">
+                    <input type="text" id="taskInput" placeholder="Add a new task...">
+                    <button id="addTaskBtn">Add Task</button>
+                </div>
+                <ul id="taskList"></ul>
+            </section>
+            <!-- Pomodoro Section -->
+            <section class="cardpomodoro-section">
+                <h2>Pomodoro Timer</h2>
+                <div class="timer-display" id="timer">
+                    25:00
+                </div>
+                <div class="timer-buttons">
+                    <button id="startBtn">Start Timer</button>
+                    <button id="pauseBtn">Pause Timer</button>
+                    <button id="resetBtn">Reset Timer</button>
+                </div>
+                <p class="session-count">Sessions Completed: <span id="sessions">0</span>
+                </p>
+            </section>
+        </main>
+        <!-- Stats Section -->
+        <section class="stats-card">
+            <h2>Progress</h2>
+            <p>
+                Completed Tasks:
+                <span id="completedCount">0</span>
+            </p>
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+        </section>
+        <footer>
+            <p>&copy; 2026 FocusForge. Stay Focused! Stay Productive!</p>
+        </footer>
+
+    <script src="js/script.js"></script>
+    </body>
+</html>

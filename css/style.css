@@ -1,0 +1,273 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'segoe UI', sans-serif;
+    background: #0f172a;
+    color: #e2e8f0;
+    min-height: 100vh;
+}
+
+/* Navbar */
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: #0b1220;
+    border-bottom: 1px solid #1e293b;
+}
+
+.logo{
+    font-size: 24px;
+    font-weight: 600;
+    color: #38bdf8;
+}
+
+.theme-btn{
+    padding: 8px 16px;
+    background: transparent;
+    border: 1px solid #38bdf8;
+    color: #38bdf8;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.theme-btn:hover{
+    background: #38bdf8;
+    color: #0f172a;
+}
+
+
+/* Dashboard Main */
+
+.dashboard{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 50px;
+    justify-content: center;
+}
+
+/* To Do Section */
+
+.cardtodo-section{
+    background: #1a1a1a;
+    border: 1px solid #222;
+    border-radius: 12px;
+    padding: 30px;
+    width: 400px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    animation: fadeInUp 0.8s ease forwards;
+    opacity: 0;
+}
+
+.cardtodo-section h2{
+    color: #00f0ff;
+    margin-bottom: 20px;
+}
+
+.todo-input{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.todo-input input{
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background: #111;
+    color: #fff;
+}
+
+.todo-input button{
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    background: #00f0f0;
+    color: #1a1a1a;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.todo-input button:hover{
+    transform: scale(1.05);
+    background: #00cfff;
+}
+
+/* To-Do list Items */
+#tasklist{
+    list-style: none;
+}
+
+#tasklist li{
+    padding: 10px;
+    border-bottom: 1px solid #333;
+    color: #fff;
+    transition: 0.3s;
+}
+
+#tasklist li:hover{
+    color: #00f0f0;
+}
+
+/* Pomodoro Section */
+
+.cardpomodoro-section{
+    background: #1a1a1a;
+    border: 1px solid #222;
+    border-radius: 12px;
+    padding: 30px;
+    width: 400px;
+    box-shadow: rgba(0, 0, 0, 0.5);
+    animation: fadeInUp 0.8s ease forwards;
+    opacity: 0;
+}
+
+.cardpomodoro-section h2{
+    color: #00f0f0;
+    margin-bottom: 20px;
+}
+
+.timer-display{
+    font-size: 48px;
+    text-align: center;
+    color:#00f0f0;
+    margin-bottom: 20px;
+}
+
+.timer-buttons{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.timer-buttons button{
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    background: #00f0f0;
+    color: #1a1a1a;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.timer-buttons button:hover{
+    transform: scale(1.05);
+    background: #00cfff;
+}
+
+.session-count span{
+    color: #00f0ff;
+    font-weight: bold;
+}
+
+/*Stats Section */
+
+.stats-card{
+    background: #1a1a1a;
+    border: 1px solid #222;
+    border-radius: 12px;
+    padding: 30px;
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto 50px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    animation: fadeInUp 0.8s ease forwards;
+    opacity: 0;
+}
+
+.stats-card h2{
+    color: #00f0f0;
+    margin-bottom: 20px;
+}
+
+.progress-bar{
+    background: #222;
+    border-radius: 12px;
+    height: 20px;
+    overflow: hidden;
+}
+
+.progress{
+    height: 100%;
+    width: 0%;
+    background: #00f0f0;
+    transition: width 0.5s ease;
+    border-radius: 12px;
+}
+
+
+/* Footer */
+
+footer{
+    background: #111;
+    color: #ccc;
+    text-align: center;
+    padding: 25px 0;
+    border-top: 1px solid #222;
+    font-size: 14px;
+}
+
+footer p{
+    margin-bottom: 10px;
+}
+
+footer a{
+    color: #00f0f0;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+footer a:hover{
+    color: #00cfff;
+    transform: scale(1.1);
+}
+
+/* Animations */
+
+@keyframes fadeInUp {
+    0%{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: tramslateY(0);
+    }
+}
+
+/* Dark Mode Styles */
+
+.dark-theme{
+    background: #0d0d0d;
+    color: #00f0f0;
+}
+
+.dark-theme .navbar{
+    background-color: #050505;
+}
+
+.dark-theme .menu-card,
+.dark-theme .cardtodo-section,
+.dark-theme .cardpomodoro-section,
+.dark-theme .stats-card{
+    background: #111111;
+    border-color: #00f0f0;
+}
+
+.dark-theme .btn-primary{
+    background-color: #00f0f0;
+    color: #0d0d0d;
+}
